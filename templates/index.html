@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f4ef">
+  <title>Digit Studio — Handwriting Recognition</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="Digit Studio home"><span class="brand-icon">d.</span><span>digit<span class="brand-light">studio</span></span></a>
+      <span class="model-status"><i></i> MODEL READY</span>
+    </header>
+
+    <section class="intro">
+      <p class="eyebrow">HANDWRITING RECOGNITION <span>·</span> MNIST</p>
+      <h1>One digit.<br><span>A little machine magic.</span></h1>
+      <p class="lede">Write a number and let the model take its best guess.</p>
+    </section>
+
+    <section class="workspace" aria-label="Digit recognition workspace">
+      <div class="draw-panel">
+        <div class="panel-heading"><div><span class="step">01</span><h2>Your drawing</h2></div><span class="hint">0–9</span></div>
+        <div class="canvas-wrap"><canvas id="drawing" width="360" height="360" aria-label="Draw a digit here"></canvas><span class="canvas-placeholder" id="placeholder">Draw a digit here<span>Use your mouse or finger</span></span><span class="canvas-corner">CANVAS / 01</span></div>
+        <div class="draw-controls"><button class="clear-btn" id="clear" type="button"><span>↺</span> Clear</button><button class="recognize-btn" id="recognize" type="button">Recognize <span>→</span></button></div>
+        <p class="error" id="error" role="alert"></p>
+      </div>
+
+      <div class="result-panel">
+        <div class="panel-heading"><div><span class="step">02</span><h2>Prediction</h2></div><span class="live-tag"><i></i> LIVE MODEL</span></div>
+        <div class="result-card" id="resultCard"><div class="result-empty" id="resultEmpty"><span class="sparkle">✳</span><p>Your result will<br>show up here.</p></div><div class="result-content" id="resultContent" hidden><span class="result-label">THE MODEL'S BEST GUESS</span><strong id="digit">—</strong><div class="confidence"><div class="confidence-top"><span>MODEL SCORE</span><span id="confidenceText">0%</span></div><div class="track"><span id="confidenceBar"></span></div><p class="runner-up" id="runnerUp"></p></div></div><span class="result-index">RESULT / 01</span></div>
+        <div class="note"><span>✦</span><p>Every prediction is a probability. Try writing clearly, then compare how different styles change the result.</p></div>
+      </div>
+    </section>
+    <footer><span>This is for educational purposes only</span><span>Convolutional Neural Network · 10 classes</span></footer>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>
