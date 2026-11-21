@@ -12,7 +12,7 @@ This project classifies handwritten digits from 0 through 9 using the MNIST data
 
 Please visit: https://handwritting-recognition.onrender.com/
 
-I use the free web service of Render web to deploy so the web may have some delaying.
+I use the free web service of Render to deploy so the web may have some delay.
 
 ## Train the CNN
 
