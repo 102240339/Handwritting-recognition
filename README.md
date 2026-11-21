@@ -8,10 +8,10 @@ This project classifies handwritten digits from 0 through 9 using the MNIST data
 - `train_digit_recognizer/run_mnist_experiments.py`: runs cross-validation, hyperparameter searches, final model comparisons, and the training-size experiment.
 - `app.py`: serves the browser-based drawing demo.
 
-## Run the web demo
+## Web demo
 
-...
-
+Please visit: https://handwritting-recognition.onrender.com/
+I use the free web service of Render web to deploy so the web may have some delaying.
 
 ## Train the CNN
 
