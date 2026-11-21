@@ -11,6 +11,7 @@ This project classifies handwritten digits from 0 through 9 using the MNIST data
 ## Web demo
 
 Please visit: https://handwritting-recognition.onrender.com/
+
 I use the free web service of Render web to deploy so the web may have some delaying.
 
 ## Train the CNN
