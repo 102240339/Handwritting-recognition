@@ -10,17 +10,8 @@ This project classifies handwritten digits from 0 through 9 using the MNIST data
 
 ## Run the web demo
 
-From the project directory:
+...
 
-```powershell
-cd Handwritting-recognition
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
-pip install -r requirements.txt
-python app.py
-```
-
-Open `http://127.0.0.1:5000`, draw one digit, and select **Recognize**.
 
 ## Train the CNN
 
