@@ -38,4 +38,4 @@ The script performs cross-validation and grid search using training data, refits
 
 ## Deployment
 
-`render.yaml` contains the Render web-service configuration. The deployed service uses the compact NumPy weights in `model_weights.npz`, so TensorFlow is not required for web inference.
+`render.yaml` contains the Render web-service configuration. The deployed service uses the compact weights in `model_weights.npz`.
