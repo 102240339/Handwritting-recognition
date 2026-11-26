@@ -76,23 +76,23 @@
     "rows": [
       {
         "training_examples": 6000,
-        "train_accuracy": 0.7605000138282776,
-        "validation_accuracy": 0.7580000162124634
+        "train_accuracy": 0.8565000295639038,
+        "validation_accuracy": 0.8528333306312561
       },
       {
         "training_examples": 15000,
-        "train_accuracy": 0.8919333219528198,
-        "validation_accuracy": 0.8833333253860474
+        "train_accuracy": 0.9001333117485046,
+        "validation_accuracy": 0.9006666541099548
       },
       {
         "training_examples": 30000,
-        "train_accuracy": 0.9455000162124634,
-        "validation_accuracy": 0.940666675567627
+        "train_accuracy": 0.9261333346366882,
+        "validation_accuracy": 0.9258333444595337
       },
       {
         "training_examples": 54000,
-        "train_accuracy": 0.9592221975326538,
-        "validation_accuracy": 0.9571666717529297
+        "train_accuracy": 0.9549999833106995,
+        "validation_accuracy": 0.9509999752044678
       }
     ]
   }
