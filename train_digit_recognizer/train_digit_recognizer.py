@@ -1,3 +1,5 @@
+import pathlib
+
 from keras.datasets import mnist
 from keras.utils import to_categorical
 from keras.models import Sequential
@@ -7,6 +9,7 @@ from keras.metrics import categorical_crossentropy
 # optimization method
 from keras.optimizers import SGD
 import matplotlib.pyplot as plt
+from pathlib import Path
 
 (X_train, y_train), (X_test, y_test) = mnist.load_data()
 
@@ -67,7 +70,8 @@ def summary_history(history):
 digit_cnn_model = build_digit_cnn()
 test_loss, test_accuracy = train_model(digit_cnn_model, X_train, y_train, X_test, y_test)
 
-digit_cnn_model.save('handwriting.h5')
+output_path = Path(__file__).resolve().parent / "handwriting.h5"
+digit_cnn_model.save(output_path)
 print('Successfully. Saving the model as handwriting.h5')
 
 print('Test loss:', test_loss)
