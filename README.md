@@ -19,7 +19,7 @@ I use the free web service of Render to deploy so the web may have some delay.
 The training workflow additionally needs TensorFlow or Keras and Matplotlib. Install those packages in the environment used for model development, then run:
 
 ```powershell
-cd *\Handwritting-recognition\train_digit_recognizer
+cd ..\Handwritting-recognition\train_digit_recognizer
 python train_digit_recognizer.py
 ```
 
@@ -30,7 +30,7 @@ The script reserves 10% of the official training split for validation and evalua
 The experiment workflow additionally needs TensorFlow or Keras, scikit-learn, and Matplotlib:
 
 ```powershell
-cd *\Handwritting-recognition\train_digit_recognizer
+cd ..\Handwritting-recognition\train_digit_recognizer
 python run_mnist_experiments.py
 ```
 
