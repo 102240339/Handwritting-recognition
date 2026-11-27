@@ -6,7 +6,7 @@ import numpy as np
 from sklearn.dummy import DummyClassifier
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import accuracy_score, f1_score
+from sklearn.metrics import accuracy_score, confusion_matrix, f1_score
 from sklearn.model_selection import (GridSearchCV, StratifiedKFold,
                                      cross_val_score, train_test_split)
 from sklearn.pipeline import make_pipeline
@@ -120,6 +120,11 @@ def main():
         "accuracy": float(accuracy_score(y_test, pred)),
         "macro_f1": float(f1_score(y_test, pred, average="macro")),
     }
+    # Rows are true labels and columns are predicted labels, ordered 0-9.
+    # Keep the numeric matrix in the results file for MATLAB plotting.
+    results["cnn_confusion_matrix"] = confusion_matrix(
+        y_test, pred, labels=np.arange(10)
+    ).tolist()
     print("Test saved CNN", results["test"]["Saved Keras CNN"], flush=True)
 
     # Training-size experiment. Reserve 6,000 examples from the official
